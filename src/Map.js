@@ -8,33 +8,33 @@ class Map extends Component {
     places: [
       {
         name: 'Rancho Da Picanha',
-        address: '945, Av. Monte Verde, Camanducaia - MG, 37650-000',
         lat: -22.862641,
-        lng: -46.035619
+        lng: -46.035619,
+        venue_id: '4c1538f87f7f2d7f2d22e268'
       },
       {
         name: 'Mon\'t Burger',
-        address: 'Av. da Fazenda, 140 - Monte Verde, Camanducaia - MG, 37650-000',
         lat: -22.865489,
-        lng: -46.043515
+        lng: -46.043515,
+        venue_id: '5765a473cd101651ce923df1'
       },
       {
         name: 'Alpminas',
-        address: 'Av. Monte Verde, 7, Camanducaia - MG, 37650-000',
         lat: -22.862641,
-        lng: -46.036485
+        lng: -46.036485,
+        venue_id: '540a56ed498e9f07ab843bee'
       },
       {
         name: 'Villa Amarela',
-        address: 'Av. da Fazenda, 10 - Monte Verde, Camanducaia - MG, 37653-000',
         lat: -22.864995,
-        lng: -46.043343
+        lng: -46.043343,
+        venue_id: '4cfba4f57945224bba2587e7'
       },
       {
         name: 'Casa da Pizza',
-        address: 'R. Pau Brasil, 309 - Monte Verde, Camanducaia - MG, 37650-000',
         lat: -22.857085,
-        lng: -46.026858
+        lng: -46.026858,
+        venue_id: '4e3091f3ae60601d2d40203d'
       }
     ]
   }
