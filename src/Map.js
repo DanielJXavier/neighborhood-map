@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
-import { withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
+import { withGoogleMap, GoogleMap } from 'react-google-maps'
+import Place from './Place'
 
 class Map extends Component {
 
-  render() {
-    const places = [
+  state = {
+    places: [
       {
         name: 'Rancho Da Picanha',
         address: '945, Av. Monte Verde, Camanducaia - MG, 37650-000',
@@ -36,11 +37,13 @@ class Map extends Component {
         lng: -46.026858
       }
     ]
-
+  }
+  
+  render() {
     const MonteVerdeMap = withGoogleMap(props => (
       <GoogleMap defaultCenter={{ lat: -22.8632259, lng: -46.0392505 }} defaultZoom={ 15 }>
-        {places.map(place =>
-          <Marker position={{ lat: place.lat, lng: place.lng }} />
+        {this.state.places.map((place, key) =>
+          <Place key={key} lat={place.lat} lng={place.lng} name={place.name} />
         )}
       </GoogleMap>
 
