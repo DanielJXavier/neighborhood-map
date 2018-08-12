@@ -122,11 +122,10 @@ class App extends Component {
       }
 
       response.json().then(data => {
-        console.log(data.response.venue)
         const venue = data.response.venue
         self.state.infowindow.setContent(`
           <h3>${venue.name} (${venue.categories[0].name})</h3>
-          ${venue.rating && `<p>Nota: ${venue.rating} (${venue.ratingSignals} votos)</p>`}
+          <p>Nota: ${venue.rating ? venue.rating : `N/A`} (${venue.ratingSignals ? venue.ratingSignals : 0} votos)</p>
           <p>Preço: ${venue.price.message}</p>
           <a href="${venue.shortUrl}">Ver mais</a>
         `)
@@ -151,7 +150,7 @@ render() {
     <div>
       <Locations key="100" locations={this.state.locations} openInfoWindow={this.openInfoWindow}
         closeInfoWindow={this.closeInfoWindow}/>
-      <div id="map"></div>
+      <div id="map" role="application" aria-label="map container"></div>
     </div>
   )
 }

@@ -1,11 +1,7 @@
-import React, {Component} from 'react'
+import React from 'react'
 
-class LocationItem extends Component {
-  render() {
-    return (
-      <li role="button" className="box" tabIndex="0" onKeyPress={this.props.openInfoWindow.bind(this, this.props.data.marker)} onClick={this.props.openInfoWindow.bind(this, this.props.data.marker)}>{this.props.data.name}</li>
-    )
-  }
-}
+const LocationItem = (props) => (
+  <li role="button" className="box" tabIndex="0" onKeyPress={props.openInfoWindow.bind(this, props.data.marker, props.data.venue_id)} onClick={props.openInfoWindow.bind(this, props.data.marker, props.data.venue_id)}>{props.data.name}</li>
+)
 
 export default LocationItem

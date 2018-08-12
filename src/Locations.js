@@ -5,7 +5,7 @@ class Locations extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      locations: ``,
+      locations: [],
       query: ``,
       suggestions: true
     }
@@ -50,7 +50,7 @@ class Locations extends Component {
 
     return (
       <div className="search">
-        <input role="search" id="search-field" className="search-field" type="text" placeholder="Filtro" value={this.state.query} onChange={this.filterLocations}/>
+        <input role="search" aria-label="search input" id="search-field" className="search-field" type="text" placeholder="Filtro" value={this.state.query} onChange={this.filterLocations}/>
         <ul>
           {this.state.suggestions && Locations}
         </ul>
