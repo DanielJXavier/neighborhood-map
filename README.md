@@ -15,6 +15,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## Technologies
 HTML5
 CSS3
-[React] (https://reactjs.org/)
-[Google Maps API] (https://developers.google.com/maps/documentation/)
-[Foursquare API] (https://developer.foursquare.com/docs)
+[React](https://reactjs.org/)
+[Google Maps API](https://developers.google.com/maps/documentation/)
+[Foursquare API](https://developer.foursquare.com/docs)
